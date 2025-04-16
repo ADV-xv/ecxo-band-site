@@ -50,6 +50,24 @@
       .navbar a:hover {
         color: #f4a261;
       }
+
+      /* Background Animation */
+      .bg-animated {
+        animation: colorShift 10s ease-in-out infinite;
+      }
+
+      @keyframes colorShift {
+        0% { background-color: #000000; } /* Black */
+        25% { background-color: #1e3a8a; } /* Blue */
+        50% { background-color: #000000; } /* Black */
+        75% { background-color: #1e3a8a; } /* Blue */
+        100% { background-color: #000000; } /* Black */
+      }
+
+      /* Animating the Hero Section */
+      .hero-text {
+        animation: fadeIn 2s ease-in-out;
+      }
     </style>
   </head>
   <body class="bg-black text-white font-sans">
@@ -64,14 +82,14 @@
       </div>
     </nav>
 
-    <!-- Hero -->
-    <section class="min-h-screen flex flex-col items-center justify-center text-center bg-gradient-to-b from-black to-gray-900 p-8 parallax" style="background-image: url('https://source.unsplash.com/1600x900/?music');">
-      <h1 class="text-6xl font-bold tracking-widest animate__animated animate__fadeIn">ECXO</h1>
-      <p class="mt-4 text-xl text-gray-400 animate__animated animate__fadeIn">Electrifying the Scene</p>
-      <p class="mt-4 text-lg text-gray-300">Where Sound Meets Soul, and Rhythm Ignites the Heart</p>
+    <!-- Hero Section with Animated Background -->
+    <section class="min-h-screen flex flex-col items-center justify-center text-center bg-gradient-to-b from-black to-gray-900 p-8 parallax bg-animated" style="background-image: url('https://source.unsplash.com/1600x900/?music');">
+      <h1 class="text-6xl font-bold tracking-widest hero-text">ECXO</h1>
+      <p class="mt-4 text-xl text-gray-400 hero-text">Electrifying the Scene</p>
+      <p class="mt-4 text-lg text-gray-300 hero-text">Where Sound Meets Soul, and Rhythm Ignites the Heart</p>
     </section>
 
-    <!-- About -->
+    <!-- About Section -->
     <section id="about" class="p-10 max-w-4xl mx-auto text-center">
       <h2 class="text-3xl font-bold mb-4">About ECXO</h2>
       <p class="text-gray-300">
@@ -111,7 +129,7 @@
       </div>
     </section>
 
-    <!-- Music -->
+    <!-- Music Section -->
     <section id="music" class="p-10 bg-gray-900 text-center">
       <h2 class="text-3xl font-bold mb-4">Our Music</h2>
       <div class="flex flex-col gap-4 items-center">
@@ -122,10 +140,10 @@
     <!-- Founder and Affiliation -->
     <section id="founder" class="p-10 text-center">
       <h2 class="text-3xl font-bold mb-4">Founder & Affiliation</h2>
-      <p class="text-gray-300">ECXO was founded by <strong>Aman Dev Sudhir</strong>, a passionate music enthusiast with a vision to break boundaries in music. We are affiliated with Fisat Music Cult.</p>
+      <p class="text-gray-300">ECXO was founded by AmanDev Sudhir on march 6 2025, a passionate music enthusiast with a vision to break boundaries in music. We are affiliated with Fisat Music Cult.</p>
     </section>
 
-    <!-- Contact -->
+    <!-- Contact Section -->
     <section id="contact" class="p-10 bg-gray-800 text-center">
       <h2 class="text-3xl font-bold mb-4">Get in Touch</h2>
       <p>Email: <a href="mailto:amandevsudhir@gmail.com" class="text-blue-400">amandevsudhir@gmail.com</a></p>
