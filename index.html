@@ -1,4 +1,3 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,13 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>ECXO - Official Band Site</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Parallax background effect */
+      .parallax {
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+      }
+
+      /* Animation for smooth scroll */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      /* Add animation for section elements */
+      section {
+        animation: fadeIn 1.5s ease-in-out;
+      }
+
+      /* Hover effects for band members */
+      .member-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        transition: all 0.3s ease-in-out;
+      }
+
+      /* Navigation bar styles */
+      .navbar {
+        position: sticky;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 1000;
+      }
+
+      .navbar a {
+        transition: color 0.3s ease;
+      }
+
+      .navbar a:hover {
+        color: #f4a261;
+      }
+    </style>
   </head>
   <body class="bg-black text-white font-sans">
+    <!-- Navbar -->
+    <nav class="navbar p-4 flex justify-between items-center text-white">
+      <h1 class="text-3xl font-bold">ECXO</h1>
+      <div class="space-x-6">
+        <a href="#about" class="hover:text-yellow-500">About</a>
+        <a href="#members" class="hover:text-yellow-500">Members</a>
+        <a href="#music" class="hover:text-yellow-500">Music</a>
+        <a href="#contact" class="hover:text-yellow-500">Contact</a>
+      </div>
+    </nav>
+
     <!-- Hero -->
-    <section class="min-h-screen flex flex-col items-center justify-center text-center bg-gradient-to-b from-black to-gray-900 p-8">
-      <h1 class="text-6xl font-bold tracking-widest">ECXO</h1>
-      <p class="mt-4 text-xl text-gray-400">Electrifying the Scene</p>
-      <a href="#music" class="mt-6 px-6 py-2 bg-white text-black font-semibold rounded hover:bg-gray-200">Listen Now</a>
+    <section class="min-h-screen flex flex-col items-center justify-center text-center bg-gradient-to-b from-black to-gray-900 p-8 parallax" style="background-image: url('https://source.unsplash.com/1600x900/?music');">
+      <h1 class="text-6xl font-bold tracking-widest animate__animated animate__fadeIn">ECXO</h1>
+      <p class="mt-4 text-xl text-gray-400 animate__animated animate__fadeIn">Electrifying the Scene</p>
+      <a href="#music" class="mt-6 px-6 py-2 bg-white text-black font-semibold rounded hover:bg-gray-200 transition duration-300 ease-in-out">Listen Now</a>
     </section>
 
     <!-- About -->
@@ -23,29 +79,94 @@
       </p>
     </section>
 
+    <!-- Know Our Members -->
+    <section id="members" class="p-10 bg-gray-800 text-center">
+      <h2 class="text-3xl font-bold mb-4">Know Our Members</h2>
+      <div class="flex flex-wrap justify-center gap-10">
+        <!-- Parthasarathy - Lead Singer -->
+        <div class="w-80 p-6 bg-gray-900 rounded-lg member-card hover:cursor-pointer">
+          <h3 class="text-xl font-bold text-white">Parthasarathy</h3>
+          <p class="text-gray-400">Lead Singer</p>
+          <p class="text-gray-400 mt-2 text-sm hidden member-info">
+            Parthasarathy’s voice is the soulful essence of ECXO, blending power with grace. His melodies stir deep emotions, making every song unforgettable.
+          </p>
+        </div>
+
+        <!-- Melsa Merin - Lead Singer -->
+        <div class="w-80 p-6 bg-gray-900 rounded-lg member-card hover:cursor-pointer">
+          <h3 class="text-xl font-bold text-white">Melsa Merin</h3>
+          <p class="text-gray-400">Lead Singer</p>
+          <p class="text-gray-400 mt-2 text-sm hidden member-info">
+            Melsa’s voice adds the perfect touch of elegance to ECXO’s music, delivering each note with clarity and passion. A true star in the making!
+          </p>
+        </div>
+
+        <!-- Agnes Joela Sam - Acoustic Guitarist & Lead Singer -->
+        <div class="w-80 p-6 bg-gray-900 rounded-lg member-card hover:cursor-pointer">
+          <h3 class="text-xl font-bold text-white">Agnes Joela Sam</h3>
+          <p class="text-gray-400">Acoustic Guitarist & Lead Singer</p>
+          <p class="text-gray-400 mt-2 text-sm hidden member-info">
+            Agnes brings the perfect blend of harmony with her acoustic guitar skills, enriching ECXO’s sound with heartfelt melodies and vocal power.
+          </p>
+        </div>
+
+        <!-- Shinto S Pomson - Electric Guitarist -->
+        <div class="w-80 p-6 bg-gray-900 rounded-lg member-card hover:cursor-pointer">
+          <h3 class="text-xl font-bold text-white">Shinto S Pomson</h3>
+          <p class="text-gray-400">Electric Guitarist</p>
+          <p class="text-gray-400 mt-2 text-sm hidden member-info">
+            Shinto’s electric guitar riffs electrify ECXO’s music, adding intensity and energy to every performance. His skill is unmatched in creating epic solos.
+          </p>
+        </div>
+
+        <!-- Amandev Sudhir - Drummer & Founder -->
+        <div class="w-80 p-6 bg-gray-900 rounded-lg member-card hover:cursor-pointer">
+          <h3 class="text-xl font-bold text-white">Amandev Sudhir</h3>
+          <p class="text-gray-400">Drummer </p>
+          <p class="text-gray-400 mt-2 text-sm hidden member-info">
+            As the founder and drummer, Amandev is the heartbeat of ECXO, driving the rhythm and ensuring that the band delivers an unforgettable live experience.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <!-- Music -->
     <section id="music" class="p-10 bg-gray-900 text-center">
       <h2 class="text-3xl font-bold mb-4">Our Music</h2>
-      <!-- Embed Spotify/YouTube -->
       <div class="flex flex-col gap-4 items-center">
-        <iframe width="300" height="200" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
         <p class="text-gray-400">Check us out on Spotify, Apple Music & YouTube!</p>
       </div>
+    </section>
+
+    <!-- Founder and Affiliation -->
+    <section id="founder" class="p-10 text-center">
+      <h2 class="text-3xl font-bold mb-4">Founder & Affiliation</h2>
+      <p class="text-gray-300">ECXO was founded by <strong>Aman Dev Sudhir </strong>, a passionate music enthusiast with a vision to break boundaries in music. We are affiliated with Fisat Music Cult.</p>
     </section>
 
     <!-- Contact -->
     <section id="contact" class="p-10 bg-gray-800 text-center">
       <h2 class="text-3xl font-bold mb-4">Get in Touch</h2>
-      <p>Email: <a href="mailto:ecxoband@gmail.com" class="text-blue-400">ecxoband@gmail.com</a></p>
+      <p>Email: <a href="mailto:amandevsudhir@gmail.com" class="text-blue-400">amandevsudhir@gmail.com</a></p>
       <div class="mt-4 flex justify-center gap-4">
-        <a href="#" class="hover:underline">Instagram</a>
-        <a href="#" class="hover:underline">YouTube</a>
-        <a href="#" class="hover:underline">Spotify</a>
+        <a href="https://www.instagram.com/_ecxo_music?igsh=MTRsYXBxdW9jaXE5dQ==" class="hover:underline">Instagram</a>
       </div>
     </section>
 
     <footer class="text-center text-sm p-4 bg-black text-gray-500">
       © 2025 ECXO. All rights reserved.
     </footer>
+
+    <script>
+      // Show more info on hover for members
+      document.querySelectorAll('.member-card').forEach(card => {
+        card.addEventListener('mouseenter', () => {
+          card.querySelector('.member-info').classList.remove('hidden');
+        });
+        card.addEventListener('mouseleave', () => {
+          card.querySelector('.member-info').classList.add('hidden');
+        });
+      });
+    </script>
   </body>
 </html>
