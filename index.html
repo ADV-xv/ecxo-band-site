@@ -57,7 +57,6 @@
       background-color: #444;
     }
 
-    /* Modal style navigation */
     #nav-popup {
       display: flex;
       opacity: 0;
@@ -87,7 +86,7 @@
     }
 
     #nav-popup .nav-link:hover {
-      color: #FFDD57; /* Custom hover color */
+      color: #FFDD57;
     }
 
     #nav-popup button {
@@ -100,19 +99,15 @@
       top: 1rem;
       right: 1rem;
     }
-
   </style>
 </head>
 <body class="bg-black text-white font-sans scroll-smooth">
 
-  <!-- Navigation Menu -->
+  <!-- Navigation -->
   <div class="fixed top-6 right-6 z-50">
-    <button id="menu-btn" class="text-white text-3xl focus:outline-none">
-      &#9776; <!-- Hamburger icon -->
-    </button>
+    <button id="menu-btn" class="text-white text-3xl focus:outline-none">&#9776;</button>
   </div>
 
-  <!-- Pop-up Nav Menu -->
   <div id="nav-popup" class="hidden items-center justify-center">
     <div class="flex flex-col gap-6 bg-gray-900 p-8 rounded-xl shadow-xl text-white text-center w-64">
       <button id="close-btn" class="self-end text-xl font-bold">&times;</button>
@@ -120,10 +115,11 @@
       <a href="#members" class="nav-link">Members</a>
       <a href="#founder" class="nav-link">Founder</a>
       <a href="#music" class="nav-link">Music</a>
+      <a href="#join" class="nav-link">Join Us</a>
     </div>
   </div>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <section class="relative min-h-screen flex flex-col items-center justify-center text-center bg-gradient-to-b from-black to-gray-900 p-8 overflow-hidden">
     <canvas id="hero-canvas"></canvas>
     <div class="hero-content">
@@ -132,7 +128,7 @@
     </div>
   </section>
 
-  <!-- About Section -->
+  <!-- About -->
   <section id="about" class="p-10 max-w-4xl mx-auto text-center" data-aos="fade-up">
     <h2 class="text-4xl font-bold mb-4">About ECXO</h2>
     <p class="text-lg text-gray-300 leading-relaxed">
@@ -140,7 +136,7 @@
     </p>
   </section>
 
-  <!-- Music Section -->
+  <!-- Music -->
   <section id="music" class="p-10 bg-gray-900 text-center" data-aos="fade-up">
     <h2 class="text-4xl font-bold mb-4">Our Music</h2>
     <div class="flex flex-col gap-4 items-center">
@@ -149,11 +145,12 @@
     </div>
   </section>
 
-  <!-- Members Section -->
+  <!-- Members -->
   <section id="members" class="p-10 bg-gray-800 text-center" data-aos="fade-up">
     <h2 class="text-4xl font-bold mb-8">Know Our Members</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-      <div class="bg-gray-900 p-6 rounded-xl shadow-lg hover:scale-105 transition duration-300 ease-in-out">
+      <!-- Members cards go here (same as before) -->
+       <div class="bg-gray-900 p-6 rounded-xl shadow-lg hover:scale-105 transition duration-300 ease-in-out">
         <h3 class="text-xl font-bold text-white">Parthasarathy</h3>
         <p class="text-gray-400">Lead Singer</p>
         <p class="text-gray-300 mt-4">Parthasarathy brings raw emotion and powerful vocals to ECXO, captivating the audience with every performance.</p>
@@ -180,33 +177,66 @@
       </div>
     </div>
   </section>
+      <!-- ... -->
+    </div>
+  </section>
 
-  <!-- Founder Section -->
+  <!-- Founder -->
   <section id="founder" class="p-10 text-center bg-black" data-aos="fade-up">
     <h2 class="text-4xl font-bold mb-4">Founder & Affiliation</h2>
     <p class="text-lg text-gray-300 max-w-3xl mx-auto">
       <strong>Amandev Sudhir</strong>, the heartbeat behind ECXO, envisioned a sound that breaks boundaries and unites listeners through rhythm and emotion. With a deep passion for music and relentless dedication, he brought together an extraordinary team to bring ECXO to life.
     </p>
-       <p class="mt-4 text-gray-400">We are proudly affiliated with <strong>FMC</strong>, a collective that supports and amplifies the voices of rising musical talents.</p>
+    <p class="mt-4 text-gray-400">We are proudly affiliated with <strong>FMC</strong>, a collective that supports and amplifies the voices of rising musical talents.</p>
   </section>
 
-  <!-- Instagram Section -->
+  <!-- Join ECXO Section -->
+  <section id="join" class="p-10 bg-gradient-to-b from-gray-950 to-black text-center text-white" data-aos="fade-up">
+  <h2 class="text-4xl font-bold mb-6">Join ECXO – We're Seeking a Keyboardist</h2>
+  <p class="text-gray-400 max-w-3xl mx-auto mb-6">
+    ECXO is expanding. We're on the hunt for a passionate and skilled keyboardist to join our sonic journey.
+    Be part of a creative collective pushing boundaries through music, visuals, and innovation.
+  </p>
+  <div class="max-w-2xl mx-auto text-left bg-gray-900 p-6 rounded-lg shadow-xl">
+    <h3 class="text-xl font-semibold mb-2">🎹 Role: Keyboardist / Synth Architect</h3>
+    <ul class="list-disc list-inside text-gray-300 mb-4">
+      <li>Collaborate on songwriting, arrangement, and sound design</li>
+      <li>Open to experimental and cinematic textures</li>
+      <li>Live performance potential (local and online)</li>
+    </ul>
+    <h3 class="text-lg font-semibold mb-2">Requirements:</h3>
+    <ul class="list-disc list-inside text-gray-400 mb-4">
+      <li>Basic to advanced keyboard skills (analog/digital synths welcome)</li>
+      <li>Commitment to creative growth</li>
+      <li>Remote collaboration possible</li>
+    </ul>
+    <form id="contact-form" action="https://formspree.io/f/mpwdzqnb" method="POST" class="space-y-4">
+      <input type="text" name="name" placeholder="Your Name" required class="w-full p-2 rounded bg-gray-800 text-white border border-gray-700"/>
+      <input type="email" name="email" placeholder="Your Email" required class="w-full p-2 rounded bg-gray-800 text-white border border-gray-700"/>
+      <textarea name="message" rows="4" placeholder="Tell us about yourself and your setup..." required class="w-full p-2 rounded bg-gray-800 text-white border border-gray-700"></textarea>
+      <button type="submit" class="w-full py-2 bg-yellow-500 text-black font-bold rounded hover:bg-yellow-400 transition">Submit Application</button>
+    </form>
+    <p id="response-msg" class="mt-4 text-sm text-green-400 hidden">Thank you! Your message has been sent. 🎉</p>
+  </div>
+</section>
+
+  <!-- Instagram -->
   <section class="p-10 bg-gray-900 text-center" data-aos="fade-up">
     <h2 class="text-3xl font-bold mb-4">Follow Us</h2>
-    <a href="https://www.instagram.com/_ecxo_music?igsh=MTRsYXBxdW9jaXE5dQ==" target="_blank" class="inline-block px-6 py-3 bg-gradient-to-r from-pink-500 to-yellow-500 text-white font-semibold rounded-full shadow-lg hover:shadow-2xl transform hover:scale-105 transition">
+    <a href="https://www.instagram.com/_ecxo_music" target="_blank" class="inline-block px-6 py-3 bg-gradient-to-r from-pink-500 to-yellow-500 text-white font-semibold rounded-full shadow-lg hover:shadow-2xl transform hover:scale-105 transition">
       @_ecxo_music
     </a>
   </section>
 
+  <!-- Footer -->
   <footer class="text-center text-sm p-4 bg-black text-gray-500">
     © 2025 ECXO. All rights reserved.
   </footer>
 
-  <!-- Star Animation Script -->
+  <!-- Stars Background -->
   <script>
     const canvas = document.getElementById('hero-canvas');
     const ctx = canvas.getContext('2d');
-
     let stars = [];
     const STAR_COUNT = 120;
 
@@ -253,11 +283,9 @@
     animateStars();
   </script>
 
-  <!-- AOS Animation Script -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>AOS.init({ once: true });</script>
 
-  <!-- Toggle Menu Script -->
   <script>
     const menuBtn = document.getElementById('menu-btn');
     const navPopup = document.getElementById('nav-popup');
@@ -271,12 +299,36 @@
       navPopup.classList.remove('show');
     });
 
-    // Close the menu when clicking outside of it
     window.addEventListener('click', (e) => {
       if (!navPopup.contains(e.target) && !menuBtn.contains(e.target)) {
         navPopup.classList.remove('show');
       }
     });
   </script>
+  <script>
+  const form = document.getElementById('contact-form');
+  const msg = document.getElementById('response-msg');
+
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const data = new FormData(form);
+    const res = await fetch(form.action, {
+      method: 'POST',
+      body: data,
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+
+    if (res.ok) {
+      form.reset();
+      msg.classList.remove('hidden');
+    } else {
+      msg.textContent = "Oops! Something went wrong.";
+      msg.classList.remove('hidden');
+      msg.classList.replace('text-green-400', 'text-red-400');
+    }
+  });
+</script>
 </body>
 </html>
